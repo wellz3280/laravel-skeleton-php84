@@ -15,7 +15,7 @@ Esqueleto laravel para novos projetos com PHP 8.4
 
 ## Requisitos
 
-* PHP 8.1
+* PHP 8.4
 * docker
 * docker-compose
 
@@ -48,13 +48,18 @@ Para executar o projeto em seu ambiente local, basta clonar o projeto
 em sua maquina local.
 
 ```sh
-git clone git@github.com:autodocdev/laravel-skeleton-php8.4.git
+git clone git@github.com:wellz3280/laravel-skeleton-php84.git
 ```
 
 Criar arquivo `.env` a partir do arqyuivo de exemplo `.env.example`.
 
 ```sh
 cp .env.example .env
+```
+
+Gerar app key
+```sh
+php artisan key:generate
 ```
 
 Instalar depedências do projetos.
