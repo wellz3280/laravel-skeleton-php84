@@ -24,3 +24,5 @@ yarn-error.log
 /vendor
 /composer.lock
 /package.json
+/supervisord.log
+/supervisord.pid
