@@ -5,7 +5,6 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Throwable;
 
 use function response;
@@ -19,12 +18,6 @@ final class AppException extends Exception
 
     public function render(Request $request): JsonResponse
     {
-
-        Log::info('AppException', [
-            'message' => $this->getMessage(),
-            'status' => $this->getCode(),
-        ]);
-
         return response()->json([
             'error' => [
                 'status'    => $this->getCode() ?: 500,

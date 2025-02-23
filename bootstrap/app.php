@@ -16,8 +16,5 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withExceptions(function (Exceptions $exceptions) {
-        $exceptions->report(function (\Throwable $exception) {
-            Log::info('AppError', ['message' => $exception->getMessage(), 'status' => $exception->getCode()]);
-            return null;
-        });
+
     })->create();
