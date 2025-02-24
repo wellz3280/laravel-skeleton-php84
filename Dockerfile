@@ -31,13 +31,6 @@ WORKDIR $APP_DIR
 
 COPY . $APP_DIR
 
-RUN mkdir -p storage/framework/views
-RUN mkdir -p storage/framework/sessions
-RUN mkdir -p storage/framework/cache
-RUN mkdir -p bootstrap/cache
-
-# RUN chown -R www-data:www-data /var/www/app
-# RUN chmod -R 775 /var/www/app/storage /var/www/app/bootstrap/cache
 RUN chown -R www-data:www-data $APP_DIR/storage $APP_DIR/bootstrap/cache \
     && chmod -R 775 $APP_DIR/storage $APP_DIR/bootstrap/cache
 
